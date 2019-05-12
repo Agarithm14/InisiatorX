@@ -5,6 +5,7 @@
     <string name="title_order">Order</string>
     <string name="title_profile">Profile</string>
     <string name="title_activity_home">Home</string>
+    <string name="title_activity_add_new">AddNewActivity</string>
     <string name="tab_order_active">Active Order</string>
     <string name="tab_order_history">History</string>
     <string name="action_settings">Settings</string>

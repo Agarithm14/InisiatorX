@@ -109,6 +109,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:gravity="center"
+                    android:onClick="newArticle"
                     android:src="@drawable/btn_article" />
 
             </LinearLayout>
@@ -124,6 +125,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:gravity="center"
+                    android:onClick="newCompetition"
                     android:src="@drawable/btn_competitions" />
 
             </LinearLayout>
@@ -150,6 +152,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:gravity="center"
+                    android:onClick="newWorkshop"
                     android:src="@drawable/btn_workshop" />
 
             </LinearLayout>
@@ -168,6 +171,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:gravity="center"
+                    android:onClick="newSeminar"
                     android:src="@drawable/btn_seminar" />
 
             </LinearLayout>

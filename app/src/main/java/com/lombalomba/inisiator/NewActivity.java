@@ -1,6 +1,7 @@
 package com.lombalomba.inisiator;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class NewActivity extends AppCompatActivity {
 
@@ -64,5 +66,39 @@ public class NewActivity extends AppCompatActivity {
             winParams.flags &= ~bits;
         }
         win.setAttributes(winParams);
+    }
+
+    public void newArticle(View view){
+        Intent i = new Intent(getApplication(), AddNewActivity.class);
+        String s = "Article";
+        int type = 0;
+        i.putExtra("name", s);
+        i.putExtra("type", type);
+        startActivity(i);
+    }
+
+    public void newCompetition(View view){
+        Intent i = new Intent(getApplication(), AddNewActivity.class);
+        String s = "Competition";
+        int type = 1;
+        i.putExtra("name", s);
+        i.putExtra("type", type);
+        startActivity(i);
+    }
+    public void newWorkshop(View view){
+        Intent i = new Intent(getApplication(), AddNewActivity.class);
+        String s = "Workshop";
+        int type = 2;
+        i.putExtra("name", s);
+        i.putExtra("type", type);
+        startActivity(i);
+    }
+    public void newSeminar(View view){
+        Intent i = new Intent(getApplication(), AddNewActivity.class);
+        String s = "Seminar";
+        int type = 3;
+        i.putExtra("name", s);
+        i.putExtra("type", type);
+        startActivity(i);
     }
 }

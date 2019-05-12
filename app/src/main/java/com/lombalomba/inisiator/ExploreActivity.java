@@ -78,26 +78,26 @@ public class ExploreActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
+        // Content tab
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        // Set up the ViewPager with the sections adapter.
+        // Content
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+        //LayoutTab
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+        //Add post
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-
                 startActivity(new Intent(getApplicationContext(), NewActivity.class));
             }
         });
@@ -181,7 +181,7 @@ public class ExploreActivity extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_explore, container, false);
             WebView mWebView = rootView.findViewById(R.id.webExplore);
             if(getArguments().getInt(ARG_SECTION_NUMBER)==1){
-                mWebView.loadUrl("https://www.inisiator.com/ini-print/order-active.php");
+                mWebView.loadUrl("https://google.com");
             }
             else if(getArguments().getInt(ARG_SECTION_NUMBER)==2){
                 mWebView.loadUrl("https://www.inisiator.com/ini-print/order-active.php");
